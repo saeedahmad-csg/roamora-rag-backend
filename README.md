@@ -1,3 +1,13 @@
+---
+title: Roamora Rag Backend
+emoji: ✈️
+colorFrom: indigo
+colorTo: blue
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # Roamora Travels — AI RAG Chatbot & Backend API
 
 An enterprise Retrieval-Augmented Generation (RAG) travel assistant for **Roamora Travels**. Grounded strictly in company policy documents (`.txt`) and curated tour package catalogs (`.xlsx`), the chatbot answers traveler inquiries with zero hallucination and warm, professional customer service guidance.
