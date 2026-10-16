@@ -40,3 +40,6 @@ wheels/
 *.swo
 .DS_Store
 Thumbs.db
+
+# Frontend repository (managed separately)
+frontend/

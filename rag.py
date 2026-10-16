@@ -145,20 +145,21 @@ def query_rag_pipeline(
          for i, doc in enumerate(retrieved_docs)]
     )
 
-    # 3. Prompt template enforcing strict grounding
+    # 3. Prompt template enforcing strict grounding with helpful fallback
     system_prompt = (
-        "You are Lumina Direct's official E-Commerce Customer Assistant. "
-        "Answer the user's question using ONLY the provided context retrieved from the store's files (.txt store policies and .xlsx product catalog).\n\n"
+        "You are Roamora Travels' official AI Travel Consultant & Assistant. "
+        "Answer the user's question using the provided context retrieved from Roamora Travels' knowledge base (.txt company info/policies and .xlsx tour package catalog).\n\n"
         "STRICT INSTRUCTIONS:\n"
-        "1. If the answer to the question cannot be determined from the provided context, you MUST say \"I don't know\". "
-        "Do not make up facts, assumptions, policies, prices, or specs outside the provided context.\n"
-        "2. Ground your answers strictly in the retrieved data (e.g. shipping fees, return window, product prices, stock status, specs).\n"
-        "3. Keep your tone polite, helpful, and concise."
+        "1. Strict Grounding: Ground all specific details (prices, days, inclusions, exclusions, cancellation policies) strictly in the provided context. Never invent fake prices, discounts, or policies.\n"
+        "2. Graceful Fallback for Missing Info: If the user asks about an unlisted destination, unlisted service, or policy not covered in the context, clearly state that this specific detail is not in our current tour catalog or policies, and warmly invite them to click 'Plan Your Trip' or email hello@roamoratravels.com for a custom itinerary or personalized quote.\n"
+        "3. Intent Recognition: If the user asks to 'book' or asks how booking works, guide them using the Step-by-Step Booking Guide in the context (choose package, 30% deposit, click 'Plan Your Trip', or contact us).\n"
+        "4. Tone: Keep your tone welcoming, professional, and inspiring.\n"
+        "5. Formatting: Do NOT use markdown bolding or asterisks (such as **text** or *text*). Output clean, readable plain text with clean bullet points (-) where appropriate."
     )
 
     prompt = ChatPromptTemplate.from_messages([
         ("system", system_prompt),
-        ("human", "Retrieved Store Context:\n{context}\n\nCustomer Question:\n{question}\n\nAnswer:")
+        ("human", "Retrieved Roamora Travels Context:\n{context}\n\nTraveler Question:\n{question}\n\nAnswer:")
     ])
 
     # 4. Initialize LLM (Defaults to gemini-3.5-flash-lite: fastest & cheapest)

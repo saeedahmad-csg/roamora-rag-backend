@@ -1,186 +1,221 @@
+"""
+create_excel_data.py - Generates Roamora Travels Tour Packages Catalog (.xlsx)
+for the RAG Chatbot Knowledge Base.
+"""
+
 import os
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 
-def create_ecommerce_products_excel(output_path="data/products.xlsx"):
+def create_travel_packages_excel(output_path="data/products.xlsx"):
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     
     wb = openpyxl.Workbook()
     ws = wb.active
-    ws.title = "Store_Product_Catalog"
+    ws.title = "Tour_Packages_Catalog"
     
     # Headers
     headers = [
-        "Product SKU",
-        "Product Name",
-        "Category",
-        "Regular Price ($)",
-        "Sale Price ($)",
-        "Stock Status & Inventory",
-        "Key Specifications & Features",
-        "Warranty & Return Policy",
+        "Package Code",
+        "Package Name",
+        "Destination",
+        "Country",
+        "Duration",
+        "Standard Price ($)",
+        "Discounted Price ($)",
+        "Availability & Group Size",
+        "Included Services",
+        "Excluded Services",
+        "Key Highlights & Itinerary",
         "Customer Rating & Reviews"
     ]
     
-    # Product items for Lumina Direct E-Commerce Store
-    products = [
+    # Tour package rows for Roamora Travels
+    packages = [
         [
-            "LUM-AUD-01",
-            "LuminaSound Elite Wireless Headphones",
-            "Audio & Sound",
-            "$249.99",
-            "$199.99",
-            "In Stock (85 units available)",
-            "Hybrid Active Noise Cancellation (up to 38dB), 40-hour battery life, USB-C fast charge (10 mins = 4 hours), multipoint Bluetooth 5.3, custom 40mm beryllium drivers, fold-flat design with carrying case",
-            "1-Year Manufacturer Warranty included. 30-Day Hassle-Free Returns. Eligible for LuminaCare 2-Year Drop & Spill Protection ($29.99).",
-            "4.8 / 5.0 (1,420 customer reviews)"
+            "ROAM-PK-01",
+            "Hunza Adventure & Cultural Odyssey",
+            "Hunza Valley & Karimabad",
+            "Pakistan",
+            "5 Days / 4 Nights",
+            "$599",
+            "$499",
+            "Available Weekly (Min 2, Max 12 persons)",
+            "4-star hotel stay with mountain views, chauffeured 4x4 Prado, professional local guide, breakfast & dinners, Attabad Lake boating passes, Altit & Baltit Fort entry fees.",
+            "International flights, personal shopping, lunch meals, travel insurance.",
+            "Scenic Karakoram Highway drive, sunrise over Rakaposhi (7,788m), exploration of ancient 800-year-old Baltit Fort, turquoise waters of Attabad Lake, Passu Cones suspension bridge walk.",
+            "4.9 / 5.0 (340 reviews) - 'Life-changing mountain views and warm hospitality.'"
         ],
         [
-            "LUM-WCH-02",
-            "LuminaPulse Ultra Smartwatch",
-            "Wearables & Fitness",
-            "$179.99",
-            "$149.99",
-            "In Stock (140 units available)",
-            "1.43-inch AMOLED Always-On Display, optical heart rate, ECG rhythm tracking, Blood Oxygen (SpO2), 110+ sports modes, 5ATM water resistant (swim-proof up to 50m), 7-day battery life, compatible with iOS & Android",
-            "1-Year Manufacturer Warranty. 30-Day Money-Back Guarantee. LuminaCare 3-Year Battery & Accidental Plan ($49.99).",
-            "4.7 / 5.0 (980 customer reviews)"
+            "ROAM-UAE-02",
+            "Dubai Luxury Escape & Desert Safari",
+            "Dubai City & Arabian Desert",
+            "United Arab Emirates",
+            "4 Days / 3 Nights",
+            "$849",
+            "$699",
+            "Available Daily (Private or Small Group)",
+            "5-star hotel in Downtown Dubai or Marina, private airport transfers, 4x4 desert dune bashing safari with BBQ dinner & show, Burj Khalifa 124th floor ticket, Dubai Marina yacht dinner cruise.",
+            "UAE tourist visa fee, personal shopping, alcoholic beverages during desert safari.",
+            "Spectacular views from Burj Khalifa, thrilling 4x4 desert safari with sandboarding and camel rides, luxury Marina yacht cruise at sunset, exploration of Old Dubai Gold & Spice Souks.",
+            "4.8 / 5.0 (520 reviews) - 'Flawless luxury arrangements and hassle-free VIP transfers.'"
         ],
         [
-            "LUM-SMH-03",
-            "LuminaGlow Smart Ambient LED Light Strip",
-            "Smart Home Lighting",
-            "$49.99",
-            "$39.99",
-            "In Stock (310 units available)",
-            "16.4 ft (5 meters) length, 16 million RGB colors + tunable warm-to-cool whites, Wi-Fi 2.4GHz & Bluetooth app control, works seamlessly with Amazon Alexa, Apple HomeKit & Google Assistant, built-in mic for music rhythmic synchronization",
-            "1-Year Replacement Warranty. 30-Day Return window (must be unused in original packaging).",
-            "4.6 / 5.0 (2,150 customer reviews)"
+            "ROAM-ID-03",
+            "Bali Tropical Retreat & Island Wellness",
+            "Ubud & Seminyak",
+            "Indonesia",
+            "6 Days / 5 Nights",
+            "$950",
+            "$799",
+            "Available Year-Round (Solo, Couples, Families)",
+            "Private villa with plunge pool in Ubud, beach resort in Seminyak, daily breakfast, private air-conditioned van & driver, sacred Tirta Empul temple tour, Uluwatu sunset fire dance tickets.",
+            "International airfare, lunch/dinners not specified, personal spa treatments.",
+            "Iconic Tegallalang rice terrace jungle swing, tranquil wellness spa sessions, sunset at Uluwatu Cliff Temple with Kecak dance, day excursion to Nusa Penida crystalline beaches.",
+            "4.9 / 5.0 (410 reviews) - 'The perfect blend of relaxation, vibrant culture, and tropical nature.'"
         ],
         [
-            "LUM-ACC-04",
-            "LuminaVault 65W GaN Fast Charger",
-            "Charging & Accessories",
-            "$39.99",
-            "$29.99",
-            "In Stock (420 units available)",
-            "Next-gen Gallium Nitride (GaN) technology, 3 ports (2x USB-C Power Delivery 3.0 + 1x USB-A QuickCharge 4.0), foldable prongs, compact travel size (50% smaller than standard chargers), powers MacBook, iPhone, Galaxy, iPad simultaneously",
-            "2-Year Extended Hardware Warranty included free. 30-Day Return Window.",
-            "4.9 / 5.0 (3,410 customer reviews)"
+            "ROAM-PK-04",
+            "Skardu Karakoram & Turquoise Lakes Expedition",
+            "Skardu & Shigar Valley",
+            "Pakistan",
+            "6 Days / 5 Nights",
+            "$749",
+            "$649",
+            "May through October (Small Group 4-10 persons)",
+            "Stay at Shangrila Resort & Shigar Serena Fort, 4x4 mountain jeeps, daily breakfast & dinner, dedicated mountain guide, permits for Deosai Plains.",
+            "Flights to/from Islamabad, high-altitude gear rental, tipping.",
+            " Shangrila Lake (Lower Kachura), boat tour on Upper Kachura Lake, sunset over the Cold Desert of Katpana, Deosai National Park ('Land of Giants'), historic Shigar Fort heritage walk.",
+            "4.9 / 5.0 (280 reviews) - 'Unreal landscapes, like stepping into another planet.'"
         ],
         [
-            "LUM-CAM-05",
-            "LuminaVision 2K Outdoor Security Camera",
-            "Smart Home Security",
-            "$89.99",
-            "$69.99",
-            "In Stock (115 units available)",
-            "2K QHD resolution (2560x1440), full color night vision with dual motion spotlights, 2-way audio intercom, AI person & vehicle detection, IP65 waterproof weatherproof rating, solar-panel compatible, microSD local storage (up to 256GB) or cloud",
-            "1-Year Manufacturer Warranty. 30-Day Free Returns. Free replacement if damaged by weather within warranty.",
-            "4.6 / 5.0 (740 customer reviews)"
+            "ROAM-TR-05",
+            "Istanbul Two Continents Heritage & Culinary Journey",
+            "Istanbul (European & Asian sides)",
+            "Türkiye",
+            "5 Days / 4 Nights",
+            "$720",
+            "$599",
+            "Available Weekly (Year-Round)",
+            "Boutique hotel in Sultanahmet, private Bosphorus yacht sunset cruise, skip-the-line passes to Hagia Sophia, Topkapi Palace & Basilica Cistern, guided Grand Bazaar culinary walking tour.",
+            "Turkish e-Visa, international airfare, optional Turkish bath (Hammam) session.",
+            "Walking through 1,500 years of history at Hagia Sophia, tasting authentic kebabs and baklava in Kadıköy, sunset cruise across the continental divide between Europe and Asia.",
+            "4.7 / 5.0 (310 reviews) - 'Knowledgeable guides and unforgettable food tastings.'"
         ],
         [
-            "LUM-KEY-06",
-            "LuminaTactile Pro Wireless Mechanical Keyboard",
-            "Computer Accessories",
-            "$129.99",
-            "$109.99",
-            "In Stock (65 units available)",
-            "75% compact layout (84 keys), hot-swappable linear red switches, PBT double-shot keycaps, south-facing per-key RGB backlighting, tri-mode connectivity (Bluetooth 5.1, 2.4GHz wireless dongle, USB-C wired), Mac & Windows compatible",
-            "1-Year Limited Warranty. 30-Day Return Policy. Switch puller and spare keycaps included in box.",
-            "4.8 / 5.0 (610 customer reviews)"
+            "ROAM-FR-06",
+            "Paris Romance, Art & Gastronomy",
+            "Paris & Versailles",
+            "France",
+            "5 Days / 4 Nights",
+            "$1,199",
+            "$999",
+            "Available Year-Round (Couples & Private Groups)",
+            "4-star boutique hotel near Saint-Germain-des-Prés, Seine River champagne cruise, Eiffel Tower summit tickets, guided Louvre Museum tour, private day excursion to Palace of Versailles.",
+            "Schengen visa fees, international flights, discretionary guide tips.",
+            "Eiffel Tower panoramic summit visit, Mona Lisa VIP viewing, stroll through cobblestone streets of Montmartre, royal gardens and Hall of Mirrors at Versailles.",
+            "4.8 / 5.0 (215 reviews) - 'Magical romantic getaway arranged to absolute perfection.'"
         ],
         [
-            "LUM-HUB-07",
-            "LuminaDock 10-in-1 USB-C Hub & Docking Station",
-            "Computer Accessories",
-            "$79.99",
-            "$64.99",
-            "In Stock (200 units available)",
-            "Dual 4K HDMI video output (dual monitor support 60Hz), 100W Power Delivery pass-through charging, Gigabit Ethernet (1000Mbps), SD/TF 4.0 card reader (up to 312MB/s), 3x USB 3.2 Gen 1 ports (5Gbps), precision aluminum unibody enclosure",
-            "1-Year Hardware Warranty. 30-Day Return Policy. Protected against overheating and voltage spikes.",
-            "4.7 / 5.0 (1,120 customer reviews)"
+            "ROAM-PK-07",
+            "Northern Pakistan Grand Circuit (Hunza + Skardu)",
+            "Gilgit, Hunza & Baltistan",
+            "Pakistan",
+            "10 Days / 9 Nights",
+            "$1,399",
+            "$1,199",
+            "June through September (Weekly Departures)",
+            "All boutique & resort accommodations, private Toyota Land Cruiser with fuel & mountain driver, all meals (breakfast, lunch, dinner), national park entry fees, cultural folk music night.",
+            "Islamabad hotel prior to departure, domestic flight Islamabad-Gilgit (if requested), personal porter fees.",
+            "The ultimate northern expedition connecting Hunza's apricot orchards and Karakoram Highway with Skardu's turquoise lakes and Deosai high-altitude plateau.",
+            "5.0 / 5.0 (190 reviews) - 'The undisputed ultimate road trip of a lifetime.'"
         ],
         [
-            "LUM-ROB-08",
-            "LuminaClean X7 Robot Vacuum & Sonic Mop",
-            "Smart Appliances",
-            "$399.99",
-            "$329.99",
-            "Low Stock (42 units available)",
-            "Precision LiDAR laser mapping, 4000Pa ultra-strong suction, sonic vibration wet mopping (3000 scrubs/min), automatic ultrasonic carpet detection & mop auto-lift, 5200mAh battery (up to 180 min runtime), automatic self-recharging and resume",
-            "1-Year Comprehensive Warranty (motors, sensors & battery). 30-Day Return Window. LuminaCare 3-Year Plan available ($49.99).",
-            "4.8 / 5.0 (890 customer reviews)"
-        ],
-        [
-            "LUM-SPK-09",
-            "LuminaBoom 360 Portable Waterproof Speaker",
-            "Audio & Sound",
-            "$69.99",
-            "$54.99",
-            "In Stock (180 units available)",
-            "360-degree omnidirectional sound, dual passive bass radiators, IPX7 100% waterproof (floats in pool/lake), 24-hour non-stop battery life, True Wireless Stereo (TWS) pairing allows syncing two units, shockproof rubberized bumper",
-            "1-Year Limited Warranty. 30-Day Return Policy. Free return shipping for store credit.",
-            "4.9 / 5.0 (2,850 customer reviews)"
-        ],
-        [
-            "LUM-AIR-10",
-            "LuminaPure H13 Smart HEPA Air Purifier",
-            "Smart Appliances",
-            "$119.99",
-            "$99.99",
-            "In Stock (90 units available)",
-            "Medical-grade H13 True HEPA 4-stage filtration, removes 99.97% of airborne dust, pollen, pet dander, smoke and odor, covers up to 1,000 sq ft, whisper-quiet sleep mode (22dB), real-time laser PM2.5 air quality sensor with 4-color light ring",
-            "2-Year Warranty on motor & electronics. 30-Day Money-Back Guarantee. Replacement filters available for $24.99.",
-            "4.7 / 5.0 (1,340 customer reviews)"
+            "ROAM-PK-08",
+            "Swat Valley & Kalam Alpine Discovery",
+            "Swat Valley, Kalam & Malam Jabba",
+            "Pakistan",
+            "4 Days / 3 Nights",
+            "$450",
+            "$380",
+            "Available Weekly (March through November)",
+            "Riverside resort in Fizagat & Kalam, private air-conditioned Prado with driver, daily breakfast & dinner, local guide, Malam Jabba chairlift & zipline passes, Mahodand Lake 4x4 jeep safari.",
+            "Lunch meals, personal shopping, optional skiing gear rental.",
+            "Explore the Switzerland of the East: Malam Jabba ski slope views, scenic Ushu pine forest walk, turquoise Mahodand Lake excursion, Mingora traditional handicrafts bazaar.",
+            "4.9 / 5.0 (260 reviews) - 'Breathtaking green valleys, river views, and fantastic mountain air.'"
         ]
     ]
     
-    # Styling
+    # Styling colors matching Roamora Travels branding (Navy #0F172A, Teal #0D9488, Gold #D97706)
     header_font = Font(name="Calibri", size=11, bold=True, color="FFFFFF")
-    header_fill = PatternFill(start_color="0D5C75", end_color="0D5C75", fill_type="solid")
-    header_align = Alignment(horizontal="center", vertical="center", wrap_text=True)
+    header_fill = PatternFill(start_color="0F172A", end_color="0F172A", fill_type="solid")
+    header_alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
     
-    row_font = Font(name="Calibri", size=10)
-    row_align = Alignment(horizontal="left", vertical="top", wrap_text=True)
+    data_font = Font(name="Calibri", size=10)
+    data_alignment = Alignment(vertical="center", wrap_text=True)
+    price_alignment = Alignment(horizontal="center", vertical="center")
+    
     thin_border = Border(
-        left=Side(style='thin', color='D9D9D9'),
-        right=Side(style='thin', color='D9D9D9'),
-        top=Side(style='thin', color='D9D9D9'),
-        bottom=Side(style='thin', color='D9D9D9')
+        left=Side(style='thin', color='CBD5E1'),
+        right=Side(style='thin', color='CBD5E1'),
+        top=Side(style='thin', color='CBD5E1'),
+        bottom=Side(style='thin', color='CBD5E1')
     )
     
-    # Write header
-    ws.append(headers)
-    for col_num in range(1, len(headers) + 1):
+    zebra_fill = PatternFill(start_color="F8FAFC", end_color="F8FAFC", fill_type="solid")
+    
+    # Write Headers
+    ws.row_dimensions[1].height = 32
+    for col_num, header in enumerate(headers, 1):
         cell = ws.cell(row=1, column=col_num)
+        cell.value = header
         cell.font = header_font
         cell.fill = header_fill
-        cell.alignment = header_align
+        cell.alignment = header_alignment
         cell.border = thin_border
-    ws.row_dimensions[1].height = 28
-    
-    # Write data
-    alt_fill = PatternFill(start_color="F0F8FA", end_color="F0F8FA", fill_type="solid")
-    for r_idx, row_data in enumerate(products, start=2):
-        ws.append(row_data)
-        fill = alt_fill if r_idx % 2 == 0 else PatternFill(fill_type=None)
-        for col_num in range(1, len(row_data) + 1):
-            cell = ws.cell(row=r_idx, column=col_num)
-            cell.font = row_font
-            cell.alignment = row_align
+        
+    # Write Data Rows
+    for row_num, row_data in enumerate(packages, 2):
+        ws.row_dimensions[row_num].height = 55
+        is_even = (row_num % 2 == 0)
+        
+        for col_num, cell_value in enumerate(row_data, 1):
+            cell = ws.cell(row=row_num, column=col_num)
+            cell.value = cell_value
+            cell.font = data_font
             cell.border = thin_border
-            if fill.fill_type:
-                cell.fill = fill
-        ws.row_dimensions[r_idx].height = 48
+            
+            if is_even:
+                cell.fill = zebra_fill
+                
+            if col_num in [1, 5, 6, 7]:
+                cell.alignment = price_alignment
+            else:
+                cell.alignment = data_alignment
 
     # Column widths
-    col_widths = [16, 32, 22, 18, 16, 26, 50, 38, 28]
-    for i, width in enumerate(col_widths, start=1):
-        ws.column_dimensions[openpyxl.utils.get_column_letter(i)].width = width
+    col_widths = {
+        'A': 16, # Package Code
+        'B': 30, # Package Name
+        'C': 26, # Destination
+        'D': 16, # Country
+        'E': 18, # Duration
+        'F': 18, # Standard Price
+        'G': 18, # Discounted Price
+        'H': 32, # Availability & Group Size
+        'I': 45, # Included Services
+        'J': 35, # Excluded Services
+        'K': 50, # Key Highlights & Itinerary
+        'L': 42  # Rating & Reviews
+    }
+    
+    for col_letter, width in col_widths.items():
+        ws.column_dimensions[col_letter].width = width
         
+    ws.freeze_panes = "A2"
+    
     wb.save(output_path)
-    print(f"E-commerce product catalog Excel file successfully created at {output_path}")
+    print(f"Successfully generated Roamora Travels Tour Packages catalog at: {output_path}")
 
 if __name__ == "__main__":
-    create_ecommerce_products_excel()
+    create_travel_packages_excel()

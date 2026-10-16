@@ -1,66 +1,104 @@
-# Lumina Direct E-Commerce Store - Official Customer & Store Policies
+# Roamora Travels — Company Profile, Policies & Booking Information
 
-## 1. About Lumina Direct
-Lumina Direct (www.luminamart.com) is a premium direct-to-consumer e-commerce retailer offering cutting-edge electronics, smart home gadgets, lifestyle tech, and high-performance accessories. Founded in 2021, Lumina Direct operates fulfillment hubs in Indianapolis, IN and Reno, NV, delivering across North America and over 40 countries worldwide.
+## 1. About Roamora Travels
+- Company Name: Roamora Travels
+- Slogan: "Where Every Journey Becomes a Story"
+- Website: www.roamoratravels.com
+- Email: hello@roamoratravels.com
+- Phone: +1-555-123-4567
+- Office Hours: Monday to Saturday, 9:00 AM – 8:00 PM EST (24/7 dedicated on-trip helpline for active travelers)
+- Mission: Roamora Travels crafts handpicked travel experiences, luxury getaways, cultural expeditions, and bespoke itineraries across iconic global destinations and hidden natural wonders.
 
-- Brand Slogan: "Smarter Technology, Brighter Living."
-- Customer Happiness Guarantee: Every order is backed by a 30-day money-back guarantee and dedicated 24/7 customer care.
+---
 
-## 2. Shipping & Delivery Guidelines
-We offer fast, insured shipping on all orders with multiple delivery tiers:
+## 2. Our Core Services
+1. Handcrafted Tour Packages: Curated small-group and private tours across Pakistan (Hunza, Skardu, Swat Valley), the Middle East (Dubai), Europe (Paris, Istanbul), and Southeast Asia (Bali).
+2. Custom Trip Planning: Personalized itineraries tailored to individual budgets, travel styles, and bucket-list preferences.
+3. On-Trip 24/7 Concierge: Round-the-clock WhatsApp and phone support for emergency assistance, local recommendations, and real-time coordination.
+4. Transport & Accommodations: Partnerships with vetted boutique hotels, luxury desert resorts, heritage forts, and licensed chauffeured vehicles.
+5. Visa Assistance: Comprehensive document checklists, embassy appointment coordination, and invitation/support letters for all destinations.
 
-- Free Standard Shipping: Automatically applied to all orders with a subtotal of $50.00 or more (after discounts, before taxes). Takes 3 to 5 business days. For orders under $50, standard shipping is a flat $4.99.
-- Expedited 2-Day Shipping: $9.99 flat rate. Guarantees delivery within 2 business days if placed before 2:00 PM EST.
-- Priority Overnight Delivery: $19.99 flat rate. Guarantees next-business-day delivery for orders placed before 2:00 PM EST Monday through Friday.
-- Order Dispatch Cutoff: Orders placed before 2:00 PM Eastern Time (Monday-Friday) are processed and shipped the same business day. Orders placed over the weekend or on federal holidays ship the next business day.
-- Carrier Partners: We ship domestically via FedEx, UPS, and USPS Priority Mail.
-- International Shipping: Available to over 40 countries via DHL Express (estimated 6-10 business days). Duties and import taxes are calculated and collected upfront at checkout (DDP - Delivered Duty Paid), so there are zero surprise fees upon arrival.
+---
 
-## 3. Order Tracking, Modifications & Cancellations
-- Order Confirmation: Immediately after placing an order, an email with your 8-digit Order Number (e.g., #LUM-84920) and order summary is dispatched.
-- Tracking Information: A tracking link is automatically emailed once the carrier scans your package. You can also track packages anytime on our website under "Track My Order".
-- Order Changes & Cancellations: Because orders are transmitted rapidly to our automated fulfillment center, cancellations or shipping address adjustments must be submitted within 60 minutes of placing the order via our Live Chat or Emergency Helpline.
+## 3. How to Book a Tour (Step-by-Step Process)
+Booking a trip with Roamora Travels is fast and straightforward:
+1. Choose Your Package or Destination: Browse our catalog (Hunza, Skardu, Swat, Dubai, Bali, Istanbul, Paris) or request a custom itinerary.
+2. Inquire or Click "Plan Your Trip": Click the "Plan Your Trip" button on the website, email hello@roamoratravels.com, or message our consultant in this chat with your travel dates and party size.
+3. Receive Itinerary & Quote: We send you a confirmed day-by-day plan with clear pricing and hotel options within 24 hours.
+4. Secure With Deposit: Pay the 30% initial deposit online via credit/debit card, PayPal, or bank transfer. Your booking dates and hotel rooms are immediately locked in.
+5. Pay Balance 21 Days Prior: Pay the remaining 70% balance at least 21 days before departure.
+6. Welcome Pack & Guide Connection: 48 hours before arrival, you will receive your final itinerary, hotel vouchers, and direct WhatsApp contact for your dedicated tour manager and chauffeur.
 
-## 4. 30-Day Returns, Exchanges & Refund Policy
-We want you to love your purchase. If you are not completely satisfied, you may initiate a return within 30 days of package delivery:
+---
 
-- Return Eligibility Window: 30 calendar days from the date of confirmed carrier delivery.
-- Item Condition: Returned items must be in brand new, original condition, including the manufacturer box, manuals, cables, power adapters, and warranty registration cards.
-- Free Exchanges & Store Credit: Return shipping is 100% FREE if you choose an item exchange or Lumina Store Credit.
-- Refunds to Original Payment Method: For refunds back to your credit card, PayPal, or bank account, a flat $5.99 return shipping and restocking fee is deducted from the refund total.
-- Defective or Damaged Upon Arrival: If an item arrives damaged in transit or is dead on arrival (DOA), notify customer support within 48 hours of delivery. We will issue a prepaid overnight return label and dispatch an immediate brand-new replacement at zero cost to you.
-- Refund Processing Timeline: Once our warehouse receives and inspects the return (typically 2-3 business days), refunds are processed to your original payment method. Depending on your financial institution, funds appear on your bank statement within 3 to 5 business days.
-- Non-Returnable Items: Digital gift cards, downloadable software licenses, customized/engraved devices, and hygiene-sensitive opened earphones/earbuds (unless verified defective).
+## 4. Booking, Payment & Deposit Policies
+- Initial Deposit: A 30% non-refundable deposit is required at the time of booking to secure hotel reservations, private permits, and domestic transport.
+- Balance Payment: The remaining 70% balance must be settled at least 21 days prior to the scheduled departure date.
+- Last-Minute Bookings: Bookings made within 21 days of departure must be paid in full at the time of confirmation.
+- Accepted Payment Methods: Visa, MasterCard, American Express, PayPal, Bank Wire Transfer (USD, EUR, GBP, PKR).
+- Price Guarantee: Once a deposit is received, the package price is 100% locked and protected against seasonal hotel price hikes or currency fluctuations.
 
-## 5. Payment Options & Checkout Security
-We offer safe, tokenized, and encrypted checkout options:
-- Credit / Debit Cards: Visa, MasterCard, American Express, Discover, JCB.
-- Digital Wallets: Apple Pay, Google Pay, Shop Pay, PayPal One-Touch.
-- Buy Now, Pay Later (BNPL): 
-  - Klarna: Split your purchase into 4 interest-free payments due every 2 weeks.
-  - Afterpay: Available for orders between $35 and $1,500.
-- Payment Security: 256-bit SSL encryption, PCI-DSS Level 1 certified checkout. We never store raw credit card numbers on our servers.
+---
 
-## 6. Lumina Rewards & VIP Loyalty Program
-Our free rewards program lets you earn perks on every purchase:
-- Point Accumulation: Earn 1 Lumina Point for every $1 spent.
-- Redemption: Every 100 Points can be redeemed for a $5.00 discount voucher at checkout.
-- Welcome Bonus: Receive 50 bonus points upon creating a free account.
-- Birthday Special: Receive an exclusive 15% off discount code during your birthday month.
-- Lumina VIP Gold Tier: Automatically unlocked when you spend $500 or more in a calendar year. Benefits include free 2-day shipping on all orders without minimum spend, priority customer support routing, and 24-hour early access to Black Friday and seasonal flash sales.
+## 5. Discounts, Family & Group Offers
+- Children Under 5 Years: Travel free of charge when sharing existing bedding with parents.
+- Children 5 to 11 Years: Receive a 50% discount on the standard tour package price.
+- Group Discount: Groups of 6 or more travelers receive an automatic 10% discount on total package pricing.
+- Early Bird Offer: Book 60+ days before your trip departure to enjoy an extra 5% discount.
+- Solo Travelers: Solo travelers can join scheduled small group tours at standard rates or book private solo packages with a single-occupancy hotel supplement.
 
-## 7. Product Warranty & LuminaCare Protection
-- Standard Manufacturer Warranty: All brand-new hardware products include a 1-Year Limited Manufacturer Warranty covering electrical failure, internal component breakdown, and factory defects.
-- LuminaCare Extended Protection (Optional at Checkout):
-  - 2-Year Plan ($29.99): Extends coverage to 2 full years and includes accidental damage protection (drops, cracked screens, liquid spills).
-  - 3-Year Plan ($49.99): Extends coverage to 3 full years, includes battery replacement if health drops below 80%, zero deductible, and express replacement courier service.
+---
 
-## 8. Customer Care & Contact Information
-Our customer support team is ready to assist you:
-- 24/7 Live Web Chat: Click the chat widget on www.luminamart.com for instant agent or AI support.
-- Email Support: support@luminamart.com (Standard response time under 4 hours).
-- Toll-Free Phone Helpline: 1-800-586-4621 (Mon-Fri 8:00 AM - 9:00 PM EST | Sat-Sun 9:00 AM - 6:00 PM EST).
-- Returns & Central Distribution Warehouse:
-  Lumina Fulfillment Center
-  850 Logistics Parkway, Suite B
-  Plainfield, IN 46168, United States
+## 6. Cancellation, Rescheduling & Refund Policy
+We understand that travel plans can change unexpectedly. Our cancellation policy is as follows:
+- 30+ Days Before Departure: Full refund of total trip cost minus a flat $50 administrative fee and non-recoverable hotel deposits.
+- 15 to 29 Days Before Departure: 50% refund of the total package price.
+- 14 Days or Less Before Departure: Non-refundable due to pre-paid hotel commitments, driver retainers, and attraction passes.
+- Free Date Rescheduling: You may reschedule your trip dates once free of charge up to 14 days prior to departure, subject to seasonal hotel availability.
+- Force Majeure & Weather Delays: If a tour is impacted by natural disasters, roadblocks (e.g. Karakoram Highway landslides), or flight cancellations, Roamora Travels provides alternate scenic routes or credits for future travel.
+
+---
+
+## 7. Luggage, Transport & Packing Rules
+- Baggage Allowance: For road trips and mountain expeditions, each traveler is allowed 1 large suitcase/duffel bag (up to 20kg) plus 1 small personal daypack.
+- Transport Vehicles: We use late-model air-conditioned Toyota Prado / Land Cruisers for mountain routes, luxury private vans for city transfers, and private chauffeurs.
+- What to Pack for Mountain Tours (Hunza, Skardu, Swat): Warm fleece/jacket for evenings, comfortable hiking shoes, sunglasses, sunblock, and universal power adapters.
+
+---
+
+## 8. Travel Insurance & Health Guidelines
+- Travel Insurance: Comprehensive international travel and medical evacuation insurance is strongly recommended for all international travelers and mandatory for mountain trekking in northern Pakistan.
+- High-Altitude Destinations (Hunza & Skardu): Altitudes range from 2,200m to 2,500m. Travelers are advised to stay hydrated and take an acclimatization rest day. We provide oxygen cylinders in our transport vehicles during mountain expeditions.
+- Dietary Requirements: Halal, vegetarian, vegan, and gluten-free dietary requests can be accommodated with 7 days advance notice.
+
+---
+
+## 9. Destinations & Highlights Overview
+- Hunza Valley (Pakistan): Famous for ancient Baltit and Altit Forts, Attabad Lake boat rides, Passu Cones, and Rakaposhi views. Best visited April through October. 5-day package starts at $499.
+- Skardu (Pakistan): Gateway to K2, Shangrila Resort, Upper Kachura Lake, Cold Desert of Katpana, and Deosai National Park. 6-day expedition starts at $649.
+- Swat Valley & Kalam (Pakistan): Known as the "Switzerland of the East". Features Malam Jabba ski resort & chairlifts, lush green Kalam Valley, Ushu pine forest, and crystal-clear Mahodand Lake. 4-day tour starts at $380 ($450 regular).
+- Dubai (UAE): Desert safari with dune bashing, Burj Khalifa observation deck, Marina luxury dinner cruise, and Dubai Mall. Ideal from October to April. 4-day escape starts at $699.
+- Istanbul (Türkiye): Bosphorus private yacht cruises, Hagia Sophia, Blue Mosque, Grand Bazaar, and Galata Tower food walks. 5-day tour starts at $599.
+- Bali (Indonesia): Ubud rice terrace swings, sacred water temples, Uluwatu sunset cliffside fire dance, and Nusa Penida island boat trips. 6-day package starts at $799.
+- Paris (France): Louvre private guided tour, Seine River champagne cruise, Eiffel Tower summit tickets, and Montmartre art tour. 5-day package starts at $999.
+- Unlisted / Custom Destinations: We design custom private itineraries across all regions of Pakistan (including Naran Kaghan, Neelum Valley Kashmir, Chitral, Kumrat, Fairy Meadows) and international bespoke destinations upon request.
+
+---
+
+## 10. Frequently Asked Questions (FAQs)
+- Q: How do I book a tour or package?
+  A: Simply click "Plan Your Trip" on our website, email hello@roamoratravels.com, or let us know in this chat! A 30% deposit secures your booking.
+- Q: What if I want to visit a destination not listed in the catalog (e.g. Swat, Kashmir, or a custom country)?
+  A: We create custom itineraries for any destination! Let our team know your preferred dates, budget, and group size, and we will craft a personalized itinerary within 24 hours.
+- Q: Can I customize an existing package?
+  A: Absolutely! All packages can be extended, shortened, upgraded to 5-star luxury hotels, or adjusted for private solo/family groups.
+- Q: Are meals and hotels included in packages?
+  A: Yes! All standard packages include daily breakfasts, selective traditional dinners (or full board on northern circuit expeditions), and vetted 4-star/5-star or heritage accommodations.
+- Q: Are international flights included in the package price?
+  A: Standard package prices cover all ground accommodations, transfers, activities, and domestic flights where specified. International flights can be booked upon request through our ticketing desk.
+- Q: What languages do tour guides speak?
+  A: All our tour leaders and guides are fluent in English and local languages (Urdu, Arabic, Turkish, French, Indonesian depending on region). Multilingual guides (German, Spanish, Chinese) are available upon advance request.
+- Q: How do I get in touch with my guide?
+  A: 48 hours prior to arrival, you will receive a WhatsApp message connecting you directly with your lead tour guide and driver.
+- Q: What is your cancellation and refund policy?
+  A: Cancellations made 30+ days before departure receive a full refund minus a $50 admin fee. Cancellations 15-29 days before departure receive a 50% refund. Cancellations within 14 days are non-refundable. You can reschedule once for free up to 14 days before departure.
