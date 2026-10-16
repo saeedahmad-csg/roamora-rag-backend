@@ -59,42 +59,47 @@ flowchart TD
 
 ---
 
-## 🚀 Tomorrow's Action Plan (Where to Start)
+## 🚀 Deployment Action Plan & Current Status
 
-When you resume tomorrow, follow these 3 clear steps to get the live website deployed:
+### ✅ Step 1: Push Frontend Changes to GitHub (COMPLETED)
+The `frontend/` directory has been committed and successfully pushed to GitHub:
+- **Repository:** `https://github.com/saeedahmad-csg/roamora-travels.git`
+- **Branch:** `main`
+- **Commits:**
+  - `907f9dd` feat: add responsive Roamora AI chat widget
+  - `366ed5f` chore: add package-lock.json
+- **Lovable Sync:** Lovable automatically pulls and renders the new chat widget in the live web app!
 
-### Step 1: Push Frontend Changes to GitHub (Lovable Auto-Sync)
-The `frontend/` directory is cloned from your Lovable repository (`https://github.com/saeedahmad-csg/roamora-travels.git`).
-Commit and push the new chat widget:
-```powershell
-cd "d:\Projects\12- RAG Chatbot\frontend"
-git add .
-git commit -m "feat: add responsive Roamora AI chat widget"
-git push origin main
-```
-> **Lovable will automatically pull and sync these changes into your live web preview!**
-
-### Step 2: Deploy the Python Backend on Free Cloud (Render / Railway)
-Lovable only hosts frontend code. The Python backend needs a public URL:
-1. Create a GitHub repo for the backend (e.g. `roamora-rag-backend`) with:
-   - `api.py`
-   - `rag.py`
-   - `create_excel_data.py`
-   - `requirements.txt`
-   - `data/` folder (`company_info.txt` & `products.xlsx`)
-2. Go to [Render.com](https://render.com) (or Railway):
-   - Click **New Web Service** → Connect your backend repo.
+### ⏳ Step 2: Deploy Backend to Free Cloud (Render / Railway)
+The backend in `12- RAG Chatbot/` is prepared and committed locally with `render.yaml` and `Procfile`:
+1. Create a new GitHub repo for the backend (e.g. `roamora-rag-backend`).
+2. Push the root repository:
+   ```powershell
+   git remote add origin https://github.com/saeedahmad-csg/roamora-rag-backend.git
+   git branch -M main
+   git push -u origin main
+   ```
+3. In [Render.com](https://render.com) (or Railway):
+   - Click **New Web Service** → Connect `roamora-rag-backend`.
    - Build Command: `pip install -r requirements.txt`
-   - Start Command: `uvicorn api:app --host 0.0.0.0 --port $PORT`
-   - Environment Variable: `GEMINI_API_KEY=your_gemini_api_key`
-3. Copy your live backend URL (e.g., `https://roamora-rag-api.onrender.com`).
+   - Start Command: `uvicorn api:app --host 0.0.0.0 --port $PORT` (or auto-detected via `render.yaml`)
+   - Environment Variable: `GEMINI_API_KEY=your_key`
+4. Copy the public backend URL (e.g. `https://roamora-rag-api.onrender.com`).
 
-### Step 3: Connect Frontend to Cloud Backend
-In [`frontend/src/components/chat-widget.tsx`](file:///d:/Projects/12-%20RAG%20Chatbot/frontend/src/components/chat-widget.tsx#L26), update the default API base URL or set `VITE_API_URL`:
-```typescript
-const API_BASE_URL = (import.meta.env as Record<string, string | undefined>)["VITE_API_URL"] || "https://your-backend-app.onrender.com";
-```
-Push this one line to GitHub, and your live Lovable website will be connected to the cloud AI chatbot!
+### ⏳ Step 3: Connect Frontend to Cloud Backend
+Once your Render backend URL is ready:
+1. In [`frontend/src/components/chat-widget.tsx`](file:///d:/Projects/12-%20RAG%20Chatbot/frontend/src/components/chat-widget.tsx#L26), set the URL:
+   ```typescript
+   const API_BASE_URL = (import.meta.env as Record<string, string | undefined>)["VITE_API_URL"] || "https://roamora-rag-api.onrender.com";
+   ```
+2. Commit and push from `frontend/`:
+   ```powershell
+   cd frontend
+   git add src/components/chat-widget.tsx
+   git commit -m "chore: connect chat widget to cloud backend URL"
+   git push origin main
+   ```
+
 
 ---
 
