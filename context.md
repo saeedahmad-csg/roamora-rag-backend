@@ -71,8 +71,10 @@ To eliminate Render's credit-card paywall and external server dependencies, the 
   - TanStack Start Server Function ([`frontend/src/lib/chat-server.ts`](file:///d:/Projects/12-%20RAG%20Chatbot/frontend/src/lib/chat-server.ts)): Native RPC server function executed purely on the server.
   - Nitro & Vite Endpoints ([`frontend/src/server.ts`](file:///d:/Projects/12-%20RAG%20Chatbot/frontend/src/server.ts) & [`frontend/vite.config.ts`](file:///d:/Projects/12-%20RAG%20Chatbot/frontend/vite.config.ts)): Full support for `POST /api/chat` and `POST /chat` with CORS, both in local development (`npm run dev`) and in production on Cloudflare / Lovable.
   - Chat Widget ([`frontend/src/components/chat-widget.tsx`](file:///d:/Projects/12-%20RAG%20Chatbot/frontend/src/components/chat-widget.tsx)): Instant 0ms pre-mounted opening, auto-focus input, multi-turn conversation memory, dynamic suggestion dismissal on typing, and sleek custom scrollbars.
-- **Latest Commit:** `61ba0a2` (pushed to `main`).
-- **Lovable Sync:** Lovable automatically pulls and builds the live website. Zero external servers needed!
+- **Latest Commit:** `d25bc3b` (pushed to `main`).
+- **Cloud Hosting Platforms Supported:**
+  - **Vercel:** Auto-detected via [`frontend/vercel.json`](file:///d:/Projects/12-%20RAG%20Chatbot/frontend/vercel.json) (`NITRO_PRESET=vercel`) giving a clean `https://*.vercel.app` domain with zero Lovable branding.
+  - **Lovable / Cloudflare:** Seamless automatic deploy to Cloudflare Workers.
 
 ### 📦 Standalone Python Backend (Optional / Archived)
 The Python FastAPI codebase remains completely functional in the root directory for standalone deployments (e.g. Hugging Face Spaces):
