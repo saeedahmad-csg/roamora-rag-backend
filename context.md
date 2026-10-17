@@ -70,8 +70,8 @@ To eliminate Render's credit-card paywall and external server dependencies, the 
   - AI Engine ([`frontend/src/lib/roamora-ai.ts`](file:///d:/Projects/12-%20RAG%20Chatbot/frontend/src/lib/roamora-ai.ts)): Direct integration with Google Gemini (`gemini-3.8-flash` & `gemini-3.5-flash-lite`), grounded context injection, warm fallback for unlisted inquiries, and source citations.
   - TanStack Start Server Function ([`frontend/src/lib/chat-server.ts`](file:///d:/Projects/12-%20RAG%20Chatbot/frontend/src/lib/chat-server.ts)): Native RPC server function executed purely on the server.
   - Nitro & Vite Endpoints ([`frontend/src/server.ts`](file:///d:/Projects/12-%20RAG%20Chatbot/frontend/src/server.ts) & [`frontend/vite.config.ts`](file:///d:/Projects/12-%20RAG%20Chatbot/frontend/vite.config.ts)): Full support for `POST /api/chat` and `POST /chat` with CORS, both in local development (`npm run dev`) and in production on Cloudflare / Lovable.
-  - Chat Widget ([`frontend/src/components/chat-widget.tsx`](file:///d:/Projects/12-%20RAG%20Chatbot/frontend/src/components/chat-widget.tsx)): Instant 0ms pre-mounted opening, auto-focus input, multi-turn conversation memory, and sleek custom scrollbars without Windows gray arrow buttons.
-- **Latest Commit:** `14baf1b` (pushed to `main`).
+  - Chat Widget ([`frontend/src/components/chat-widget.tsx`](file:///d:/Projects/12-%20RAG%20Chatbot/frontend/src/components/chat-widget.tsx)): Instant 0ms pre-mounted opening, auto-focus input, multi-turn conversation memory, dynamic suggestion dismissal on typing, and sleek custom scrollbars.
+- **Latest Commit:** `61ba0a2` (pushed to `main`).
 - **Lovable Sync:** Lovable automatically pulls and builds the live website. Zero external servers needed!
 
 ### 📦 Standalone Python Backend (Optional / Archived)
