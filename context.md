@@ -61,49 +61,23 @@ flowchart TD
 
 ## 🚀 Deployment Action Plan & Current Status
 
-### ✅ Step 1: Push Frontend Changes to GitHub (COMPLETED)
-The `frontend/` directory has been committed and successfully pushed to GitHub:
+### ✅ Step 1: Frontend + AI Backend Merged & Deployed to GitHub (COMPLETED)
+To eliminate Render's credit-card paywall and external server dependencies, the backend AI consultant was **merged directly into the frontend** using TanStack Start & Nitro:
 - **Repository:** `https://github.com/saeedahmad-csg/roamora-travels.git`
 - **Branch:** `main`
-- **Commits:**
-  - `907f9dd` feat: add responsive Roamora AI chat widget
-  - `366ed5f` chore: add package-lock.json
-- **Lovable Sync:** Lovable automatically pulls and renders the new chat widget in the live web app!
+- **Architecture Highlights:**
+  - In-memory Knowledge Base ([`frontend/src/lib/knowledge-base.ts`](file:///d:/Projects/12-%20RAG%20Chatbot/frontend/src/lib/knowledge-base.ts)): Houses all 8 tour packages (Hunza, Skardu, Swat, Dubai, Bali, Istanbul, Paris, Northern Circuit) + booking terms, deposit & cancellation policies, baggage & health guidelines.
+  - AI Engine ([`frontend/src/lib/roamora-ai.ts`](file:///d:/Projects/12-%20RAG%20Chatbot/frontend/src/lib/roamora-ai.ts)): Direct integration with Google Gemini (`gemini-3.8-flash` & `gemini-3.5-flash-lite`), grounded context injection, warm fallback for unlisted inquiries, and source citations.
+  - TanStack Start Server Function ([`frontend/src/lib/chat-server.ts`](file:///d:/Projects/12-%20RAG%20Chatbot/frontend/src/lib/chat-server.ts)): Native RPC server function executed purely on the server.
+  - Nitro & Vite Endpoints ([`frontend/src/server.ts`](file:///d:/Projects/12-%20RAG%20Chatbot/frontend/src/server.ts) & [`frontend/vite.config.ts`](file:///d:/Projects/12-%20RAG%20Chatbot/frontend/vite.config.ts)): Full support for `POST /api/chat` and `POST /chat` with CORS, both in local development (`npm run dev`) and in production on Cloudflare / Lovable.
+  - Chat Widget ([`frontend/src/components/chat-widget.tsx`](file:///d:/Projects/12-%20RAG%20Chatbot/frontend/src/components/chat-widget.tsx)): Queries local relative endpoints with automatic server function fallback. No external URLs or third-party port 8000 dependencies needed!
+- **Latest Commit:** `e7bacb6` (pushed to `main`).
+- **Lovable Sync:** Lovable automatically pulls and builds the live website. Zero external servers needed!
 
-### ✅ Step 2: Push Backend Repository to GitHub (COMPLETED)
-The backend codebase in `12- RAG Chatbot/` is packaged, committed, and pushed to GitHub:
+### 📦 Standalone Python Backend (Optional / Archived)
+The Python FastAPI codebase remains completely functional in the root directory for standalone deployments (e.g. Hugging Face Spaces):
 - **Repository:** `https://github.com/saeedahmad-csg/roamora-rag-backend.git`
-- **Branch:** `main`
-- **Features Included:**
-  - `api.py`: FastAPI REST API with CORS, pre-computed FAISS startup indexing, and dynamic `$PORT` support.
-  - `rag.py`: LangChain RAG pipeline powered by Gemini embeddings and `gemini-3.5-flash-lite`.
-  - `Procfile` & `render.yaml`: Auto-configuration for Render & Railway.
-  - `data/`: `company_info.txt` policies & `products.xlsx` tour packages (including Swat Valley).
-  - Pinned `requirements.txt` and `.env.example`.
-
-### ✅ Step 3: Connect Frontend to Cloud Backend (COMPLETED)
-In [`frontend/src/components/chat-widget.tsx`](file:///d:/Projects/12-%20RAG%20Chatbot/frontend/src/components/chat-widget.tsx#L26), the API endpoint has been upgraded to auto-detect environments:
-- In production (Lovable): Points automatically to `https://roamora-rag-backend.onrender.com`.
-- In local development (`localhost` / `127.0.0.1`): Points to `http://localhost:8000`.
-- Environment variable `VITE_API_URL` is also supported as an override.
-- Pushed commit `0f1b51c` to `https://github.com/saeedahmad-csg/roamora-travels.git` (`main`).
-
----
-
-## 🌐 Final Step for Live Activation on Render.com (1-Minute Setup)
-Now all code is on GitHub! To turn the free cloud server on:
-1. Go to [dashboard.render.com](https://dashboard.render.com) (or sign in with GitHub).
-2. Click **New +** → **Web Service**.
-3. Select your repository: **`saeedahmad-csg/roamora-rag-backend`**.
-4. In the setup form:
-   - **Name:** `roamora-rag-backend`
-   - **Runtime:** `Python 3`
-   - **Build Command:** `pip install -r requirements.txt`
-   - **Start Command:** `uvicorn api:app --host 0.0.0.0 --port $PORT`
-5. Under **Environment Variables**, add:
-   - `GEMINI_API_KEY`: *(paste your Gemini API key)*
-6. Click **Create Web Service**.
-7. As soon as Render finishes building, your backend will be live at `https://roamora-rag-backend.onrender.com`, and your Lovable website will immediately answer traveler queries live in production!
+- **Files:** `api.py`, `rag.py`, `Dockerfile`, `Procfile`, `render.yaml`
 
 
 ---
