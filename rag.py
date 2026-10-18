@@ -118,8 +118,13 @@ def _extract_text_content(content: Any) -> str:
                 texts.append(item["text"])
             elif isinstance(item, str):
                 texts.append(item)
+            elif hasattr(item, "text"):
+                texts.append(str(item.text))
+            else:
+                texts.append(str(item))
         return "\n".join(texts)
     return str(content)
+
 
 
 def query_rag_pipeline(
@@ -162,14 +167,26 @@ def query_rag_pipeline(
         ("human", "Retrieved Roamora Travels Context:\n{context}\n\nTraveler Question:\n{question}\n\nAnswer:")
     ])
 
-    # 4. Initialize LLM (Defaults to gemini-3.5-flash-lite: fastest & cheapest)
+    # 4. Initialize LLM with automatic fallback
     if provider.lower() == "gemini":
         from langchain_google_genai import ChatGoogleGenerativeAI
-        selected_model = model_name or "gemini-3.5-flash-lite"
-        llm = ChatGoogleGenerativeAI(
-            model=selected_model,
-            google_api_key=api_key
-        )
+        candidate_models = [model_name] if model_name else ["gemini-3.5-flash-lite", "gemini-2.5-flash", "gemini-1.5-flash"]
+        response = None
+        last_err = None
+        for cand_model in candidate_models:
+            try:
+                llm = ChatGoogleGenerativeAI(
+                    model=cand_model,
+                    google_api_key=api_key
+                )
+                chain = prompt | llm
+                response = chain.invoke({"context": context_text, "question": question})
+                break
+            except Exception as e:
+                last_err = e
+                continue
+        if response is None:
+            raise last_err or RuntimeError("Failed to invoke Gemini LLM with any candidate model.")
     else:
         from langchain_openai import ChatOpenAI
         selected_model = model_name or "gpt-4o-mini"
@@ -178,11 +195,10 @@ def query_rag_pipeline(
             temperature=0.0,
             openai_api_key=api_key
         )
+        chain = prompt | llm
+        response = chain.invoke({"context": context_text, "question": question})
 
-    chain = prompt | llm
-
-    # 5. Generate answer
-    response = chain.invoke({"context": context_text, "question": question})
+    # 5. Extract clean text content
     raw_content = response.content if hasattr(response, "content") else str(response)
     answer_text = _extract_text_content(raw_content)
 
@@ -191,3 +207,4 @@ def query_rag_pipeline(
         "retrieved_chunks": retrieved_docs,
         "context_text": context_text
     }
+

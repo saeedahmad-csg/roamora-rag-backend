@@ -90,7 +90,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     title="Roamora Travels RAG API",
     description="REST backend providing grounded travel advisory and tour catalog answers.",
-    version="1.0.0",
+    version="1.0.1",
     lifespan=lifespan
 )
 
