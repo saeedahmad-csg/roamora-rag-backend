@@ -165,7 +165,7 @@ def query_rag_pipeline(
     # 4. Initialize LLM (Defaults to gemini-3.5-flash-lite: fastest & cheapest)
     if provider.lower() == "gemini":
         from langchain_google_genai import ChatGoogleGenerativeAI
-        selected_model = model_name or "gemini-3.5-flash-lite"
+        selected_model = model_name or "gemini-2.0-flash-lite"
         llm = ChatGoogleGenerativeAI(
             model=selected_model,
             google_api_key=api_key
